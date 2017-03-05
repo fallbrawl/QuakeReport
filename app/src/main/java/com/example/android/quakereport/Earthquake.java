@@ -7,10 +7,11 @@ import java.util.Date;
  */
 public class Earthquake {
 
-    Earthquake(double power, String city, Date date){
+    Earthquake(double power, String city, long date, String siteName) {
         this.power = power;
         this.city = city;
         this.date = date;
+        this.siteName = siteName;
     }
 
     public double getPower() {
@@ -21,13 +22,17 @@ public class Earthquake {
         return city;
     }
 
-    public Date getDate() {
+    public long getDate() {
         return date;
+    }
+
+    public String getSiteName() {
+        return siteName;
     }
 
     private double power = 0;
     private String city = "";
-    private Date date = null;
-
+    private long date = -1;
+    private String siteName = "";
 
 }
